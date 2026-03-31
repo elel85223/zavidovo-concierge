@@ -416,40 +416,27 @@ body{font-family:'Manrope',sans-serif;background:#111827;display:flex;flex-direc
     overflow: hidden;
   }
   .mode-label {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 300;
-    background: rgba(244,247,250,.92);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    padding: env(safe-area-inset-top, 8px) 16px 0;
-    margin: 0;
-    color: var(--ts);
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 1px;
+    display: none !important;
   }
   .mode-switch {
     position: fixed;
-    top: calc(env(safe-area-inset-top, 8px) + 14px);
-    left: 8px;
-    right: 8px;
+    top: env(safe-area-inset-top, 6px);
+    left: 16px;
+    right: 16px;
     z-index: 300;
-    background: rgba(244,247,250,.92);
+    background: rgba(244,247,250,.88);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--brd);
-    border-radius: 14px;
-    padding: 3px;
-    gap: 2px;
+    border-radius: 10px;
+    padding: 2px;
+    gap: 1px;
   }
   .mode-btn {
     color: var(--ts);
-    font-size: 12px;
-    padding: 7px 10px;
-    border-radius: 11px;
+    font-size: 10px;
+    padding: 4px 6px;
+    border-radius: 8px;
     flex: 1;
   }
   .mode-btn.active {
@@ -463,7 +450,7 @@ body{font-family:'Manrope',sans-serif;background:#111827;display:flex;flex-direc
     height: 100dvh !important;
     border-radius: 0 !important;
     box-shadow: none !important;
-    padding-top: calc(env(safe-area-inset-top, 8px) + 52px);
+    padding-top: calc(env(safe-area-inset-top, 6px) + 30px);
   }
   .proto { display: none !important; }
   .sb { display: none !important; }
@@ -485,10 +472,9 @@ body{font-family:'Manrope',sans-serif;background:#111827;display:flex;flex-direc
 
 /* PWA standalone: hide mode label top line, more space */
 @media (max-width: 430px) and (display-mode: standalone) {
-  .mode-label { padding-top: calc(env(safe-area-inset-top, 44px)) !important; }
-  .mode-switch { top: calc(env(safe-area-inset-top, 44px) + 14px) !important; }
-  .phone { padding-top: calc(env(safe-area-inset-top, 44px) + 52px) !important; }
-  .toast { top: calc(env(safe-area-inset-top, 44px) + 60px) !important; }
+  .mode-switch { top: calc(env(safe-area-inset-top, 44px)) !important; }
+  .phone { padding-top: calc(env(safe-area-inset-top, 44px) + 30px) !important; }
+  .toast { top: calc(env(safe-area-inset-top, 44px) + 36px) !important; }
 }
 </style>
 </head>
