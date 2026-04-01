@@ -1587,10 +1587,6 @@ body{font-family:'Manrope',sans-serif;background:#111827;display:flex;flex-direc
         <div class="notif-body"><div class="notif-title">Тиайм подтверждён</div><div class="notif-text">Гольф завтра 8:30, 18 лунок. Флайт: вы и Дмитрий К. Гольф-кар заказан.</div><div class="notif-time">3 часа назад</div></div>
       </div>
       <div class="notif-item">
-        <div class="notif-icon svc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
-        <div class="notif-body"><div class="notif-title">Мойка авто выполнена</div><div class="notif-text">Lexus LX: наружная + салон. Стоимость: 2 800 руб, списано с клубного счёта.</div><div class="notif-time">Вчера</div></div>
-      </div>
-      <div class="notif-item">
         <div class="notif-icon key"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <div class="notif-body"><div class="notif-title">Система полива: сезонная проверка</div><div class="notif-text">Плановое обслуживание полива запланировано на 7 апреля. Подтвердите или перенесите.</div><div class="notif-time">2 дня назад</div>
         <div class="notif-actions"><button class="notif-btn pri" onclick="T('Дата подтверждена')">Подтвердить</button><button class="notif-btn" onclick="T('Выберите другую дату')">Перенести</button></div></div>
@@ -1758,11 +1754,6 @@ body{font-family:'Manrope',sans-serif;background:#111827;display:flex;flex-direc
         <div class="order-sub">Забор 1 апреля, 10:00. Возврат через 3 дня</div>
       </div>
 
-      <div class="order-card">
-        <div class="order-top"><div class="order-name">Мойка авто</div><div class="order-status done">Выполнено</div></div>
-        <div class="order-sub">Lexus LX, наружная + салон. Оценить</div>
-      </div>
-
       <div class="st">На курорте сегодня <span class="ai-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>Для вас</span></div>
 
       <div class="cd">
@@ -1906,10 +1897,6 @@ body{font-family:'Manrope',sans-serif;background:#111827;display:flex;flex-direc
         <div class="svc-cat" onclick="showResSvcForm('laundry')">
           <div class="ci blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div>
           <div><div class="svc-label">Прачечная и химчистка</div><div class="svc-sub">Забор и доставка, одежда, шторы, ковры</div></div>
-        </div>
-        <div class="svc-cat" onclick="showResSvcForm('auto')">
-          <div class="ci slate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 16H9m10 0h3v-3.15a1 1 0 00-.84-.99L16 11l-2.7-3.6a1 1 0 00-.8-.4H5.24a2 2 0 00-1.8 1.1l-.8 1.63A6 6 0 002 12.42V16h2"/><circle cx="6.5" cy="16.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg></div>
-          <div><div class="svc-label">Авто</div><div class="svc-sub">Мойка, детейлинг, ТО, заправка, зарядка</div></div>
         </div>
         <div class="svc-cat" onclick="showResSvcForm('clean')">
           <div class="ci gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3v16h16"/><path d="M19 7l-4 4-4-4-4 8"/></svg></div>
@@ -2602,7 +2589,7 @@ function launchPrep(){
 
 // Resident: Services
 function showResSvcForm(type){
-  const titles={house:'Дом: ремонт и обслуживание',territory:'Участок и сад',laundry:'Прачечная и химчистка',auto:'Авто',clean:'Уборка дома',transport:'Такси и трансфер'};
+  const titles={house:'Дом: ремонт и обслуживание',territory:'Участок и сад',laundry:'Прачечная и химчистка',clean:'Уборка дома',transport:'Такси и трансфер'};
   document.getElementById('res-svc-cats').style.display='none';
   document.getElementById('res-svc-form').style.display='block';
   document.getElementById('res-svc-tracking').style.display='none';
