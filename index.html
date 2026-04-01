@@ -883,6 +883,17 @@ body{font-family:'Manrope',sans-serif;background:#111827;display:flex;flex-direc
     <div class="ct">
       <div class="wb"><div><div style="font-size:34px;font-weight:300">+3°</div><div style="font-size:13px;opacity:.85">Облачно, дождь</div><div style="background:rgba(255,255,255,.18);border-radius:20px;padding:5px 12px;font-size:11px;margin-top:8px;display:inline-block">Крытые активности</div></div><div style="position:relative;z-index:1;text-align:right;opacity:.8"><div style="font-size:32px;font-weight:300">Сб</div><div style="font-size:12px">16 марта</div></div></div>
 
+      <div class="cd" style="background:var(--pp);border-color:#C4BFEF;padding:14px;cursor:pointer" onclick="go('r-plan')">
+        <div class="cr">
+          <div class="ci blue" style="width:42px;height:42px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:22px;height:22px"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <div class="cb">
+            <div class="cn" style="font-size:15px">Мой план на сегодня</div>
+            <div class="cdesc">8 активностей, 2 забронированы. Дождь учтён</div>
+          </div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--pri)" stroke-width="2" width="20" height="20"><path d="M9 18l6-6-6-6"/></svg>
+        </div>
+      </div>
+
       <div class="qg" style="grid-template-columns:1fr 1fr 1fr">
         <div class="qi" onclick="go('r-activities')"><div class="qi-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><div class="qi-l">Активности</div></div>
         <div class="qi" onclick="go('r-nearby')"><div class="qi-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="qi-l">Рядом</div></div>
@@ -1499,6 +1510,49 @@ body{font-family:'Manrope',sans-serif;background:#111827;display:flex;flex-direc
       <div class="cd" style="padding:12px"><div class="cr"><div class="ci slate" style="width:36px;height:36px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:18px;height:18px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="cb"><div class="cn" style="font-size:13px">Гольф-клуб</div><div class="cdesc">1.5 км. Гольф-кары, клюшки, ботинки, багги</div></div></div></div>
 
       <div class="info"><b>Оплата</b>На счёт номера или картой. При возврате инвентаря автоматическое списание по факту.</div>
+    </div>
+    <div class="nav">
+      <button class="nav-item" onclick="goHome()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg><span class="nav-label">Главная</span></button>
+      <button class="nav-item" onclick="go('r-activities')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg><span class="nav-label">Активности</span></button>
+      <button class="nav-item" onclick="go('r-nearby')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span class="nav-label">Рядом</span></button>
+      <button class="nav-item" onclick="goChat()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><span class="nav-label">Консьерж</span></button>
+      <button class="nav-item" onclick="goProfile()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span class="nav-label">Профиль</span></button>
+    </div>
+  </div>
+
+  <!-- RET: My Plan -->
+  <div id="r-plan" class="screen" data-mode="ret">
+    <div class="sb"><span>9:41</span><span>Завидово</span><span>100%</span></div>
+    <div class="hd">
+      <button class="back" onclick="goHome()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Главная</button>
+      <div class="hd-g">Мой план на субботу</div>
+      <div class="hd-n">16 марта</div>
+      <div class="hd-s">Рябина от Васта, №412, дождь +3°, дети 5 и 10 лет</div>
+    </div>
+    <div class="ct">
+      <div class="wb"><div><div style="font-size:34px;font-weight:300">+3°</div><div style="font-size:13px;opacity:.85">Облачно, дождь</div><div style="background:rgba(255,255,255,.18);border-radius:20px;padding:5px 12px;font-size:11px;margin-top:8px;display:inline-block">Крытые активности в приоритете</div></div><div style="position:relative;z-index:1;text-align:right;opacity:.8"><div style="font-size:32px;font-weight:300">Сб</div><div style="font-size:12px">16 марта</div></div></div>
+      <div class="info" id="r-plan-info"><b>Как составлен план</b>Учтены: дождь (крытые), дети 5 и 10 лет, ваши предпочтения за 3 визита, расстояние от Рябины, время работы. Отметьте что нравится, уберите лишнее, замените.</div>
+      <div id="r-plan-items"></div>
+
+      <div id="r-filtered">
+        <div class="st">Не вошло (отфильтровано)</div>
+        <div class="cd" style="opacity:.4;padding:12px"><div style="font-size:10px;color:var(--err);font-weight:600">Не работает в дождь, летний сезон</div><div class="cn" style="font-size:13px">Парусная школа</div></div>
+        <div class="cd" style="opacity:.4;padding:12px"><div style="font-size:10px;color:var(--err);font-weight:600">Уличная активность, дождь</div><div class="cn" style="font-size:13px">Квадроциклы «Экспедиция»</div></div>
+      </div>
+
+      <div id="r-plan-btns-edit">
+        <button class="btn" style="margin-top:16px;background:var(--gold)" onclick="rRecalc()">Пересчитать план</button>
+        <button class="btn" style="margin-top:8px" onclick="rAcceptAll()">Принять план</button>
+      </div>
+      <div id="r-plan-btns-accepted" style="display:none">
+        <div class="cd" style="background:var(--ol);border-color:#B8E6D0;text-align:center;padding:14px">
+          <div style="font-weight:700;color:var(--ok);font-size:14px">План принят!</div>
+          <div style="font-size:12px;color:var(--ok);margin-top:4px">Уведомления о бронированиях включены</div>
+        </div>
+        <button class="btn" style="margin-top:8px" onclick="document.querySelector('#r-plan .ct').scrollTo({top:0,behavior:'smooth'})">Посмотреть мой план</button>
+        <button class="btn ol" style="margin-top:8px" onclick="T('План отправлен семье в WhatsApp')">Поделиться с семьёй</button>
+        <button class="btn" style="margin-top:8px;background:var(--gold)" onclick="rEdit()">Скорректировать план</button>
+      </div>
     </div>
     <div class="nav">
       <button class="nav-item" onclick="goHome()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg><span class="nav-label">Главная</span></button>
@@ -2373,6 +2427,7 @@ function go(id){
   const el=document.getElementById(id);
   if(el)el.classList.add('active');
   if(id==='n-plan')renderNewPlan();
+  if(id==='r-plan')renderRetPlan();
   if(id==='r-nearby')setTimeout(initZavidovoMap,100);
 }
 
@@ -2483,6 +2538,89 @@ function nEdit(){
   inf.innerHTML='<b>Режим редактирования</b>Измените план, замените активности, и нажмите «Принять план» когда будет готово.';
   inf.style.background='var(--pp)';inf.style.borderColor='#D4DEFF';inf.style.color='var(--pri)';
   renderNewPlan();T('Режим редактирования.');
+}
+
+// ===== Returning guest plan =====
+const rPlanData=[
+  {id:'r-breakfast',time:'9:00',name:'Завтрак',sub:'«Поле Сад», ваш отель, включён',tag:'inc',tagText:'Включено',fixed:true},
+  {id:'r-aqua',time:'10:30',name:'Аквапарк АКВА & СПА',sub:'700м, горки, бассейны, детская зона, 4 800 руб',tag:'sg',tagText:'Дождь, крытый, дети ОК',status:'pending',
+   alts:[{name:'Детская комната Radisson',sub:'500м, от 3 лет, аниматоры, 1 200 руб/час'},{name:'Кинозал при Radisson',sub:'500м, семейные сеансы, от 500 руб'}]},
+  {id:'r-master',time:'12:00',name:'Мастер-класс: роспись керамики',sub:'Семейный парк, 600м, дети 5-12 лет, 800 руб',tag:'sg',tagText:'Идеальный возраст для обоих',status:'pending',
+   alts:[{name:'Мастер-класс: мыловарение',sub:'Семейный парк, 600м, дети 4-14 лет, 800 руб'},{name:'Мастер-класс: лепка из глины',sub:'Семейный парк, 600м, дети 5-12 лет, 900 руб'}]},
+  {id:'r-lunch',time:'13:30',name:'Обед: «Поле Сад»',sub:'Ваш отель, 0м, детское меню, ок. 1 900 руб',tag:'sg',tagText:'Дождь, не нужно идти далеко',status:'pending',
+   alts:[{name:'Обед: Трактир в Ямской',sub:'1.2 км, русская кухня, ок. 1 500 руб'},{name:'Обед: Mizu',sub:'Ямская, 1.2 км, паназиатская, ок. 1 500 руб'}]},
+  {id:'r-free1',time:'15:00',free:true,freeText:'Свободное время. Кофе в «Твой хлеб» (300м)?'},
+  {id:'r-golf',time:'16:00',name:'Гольф-симулятор',sub:'Radisson, 500м, виртуальные поля, 3 500 руб/час',tag:'sg',tagText:'Вы были на вводном уроке',status:'pending',
+   alts:[{name:'Фитнес-центр',sub:'Radisson, 500м, тренажёрный зал, 800 руб'},{name:'Теннисный корт',sub:'1.2 км, крытый, ракетки вкл., 1 500 руб/час'}]},
+  {id:'r-dinner',time:'19:00',name:'Ужин: гриль «Жар»',sub:'Стейки, Radisson, 500м, ок. 4 000 руб, детское меню',tag:'sg',tagText:'Ваш любимый, были 2 раза',status:'pending',
+   alts:[{name:'Ужин: GIOCO',sub:'Итальянская, Radisson, 500м, ок. 3 000 руб'},{name:'Ужин: ЦАРЕВНА',sub:'Русская кухня, SPA Village, 900м, ок. 3 000 руб'},{name:'Ужин: Mizu',sub:'Паназиатская, Ямская, 1.2 км, ок. 1 500 руб'}]},
+  {id:'r-karaoke',time:'21:00',name:'Караоке The Shore',sub:'Radisson, рядом с «Жар», ок. 850 руб',tag:'sg',tagText:'Рекомендация',status:'pending',
+   alts:[{name:'Бар The Waterfront',sub:'Коктейли, Radisson, ок. 1 500 руб'},{name:'Свободный вечер',sub:'Отдых в номере, прогулка по набережной'}]}
+];
+let rPlanAccepted=false;
+
+function renderRetPlan(){
+  const c=document.getElementById('r-plan-items');c.innerHTML='';
+  rPlanData.forEach((item,i)=>{
+    if(item.free){
+      c.innerHTML+=`<div class="plan-free" onclick="T('${item.freeText||'Подбираю активности на '+item.time+'...'}')"><div class="free-icon">+</div><b>${item.time}</b> · Свободное время<br>${item.freeText||'Нажмите, чтобы добавить активность'}</div>`;
+      return;
+    }
+    const rej=item.status==='rejected',acc=item.status==='accepted';
+    let tagCls=item.tag==='inc'?'inc':'sg';
+    let h=`<div class="plan-item" style="${rej?'opacity:.3;':''}${acc?'border-color:var(--ok);background:#FAFFFE;':''}">`;
+    h+=`<div class="plan-time">${item.time}</div><div class="plan-name">${item.name}</div><div class="plan-sub">${item.sub}</div>`;
+    if(rPlanAccepted){h+=`<div class="plan-tag" style="background:var(--ol);color:var(--ok)">В плане</div>`}
+    else{h+=`<div class="plan-tag ${tagCls}">${item.tagText||''}</div>`}
+    if(!item.fixed&&!rPlanAccepted){
+      if(rej){h+=`<div class="plan-actions"><button class="plan-btn" onclick="rRestore(${i})" style="border-color:var(--pri);color:var(--pri)">Вернуть</button></div>`}
+      else{h+=`<div class="plan-actions"><button class="plan-btn yes" onclick="rAccept(${i})">Да, беру</button><button class="plan-btn no" onclick="rReject(${i})">Убрать</button>`;if(item.alts&&item.alts.length)h+=`<button class="plan-btn swap" onclick="rShowAlts(${i})">Заменить</button>`;h+=`</div><div id="ralts-${item.id}"></div>`}
+    }
+    h+=`</div>`;c.innerHTML+=h;
+  });
+}
+function rAccept(i){rPlanData[i].status='accepted';T(rPlanData[i].name+' добавлен в план');renderRetPlan()}
+function rReject(i){rPlanData[i].status='rejected';renderRetPlan()}
+function rRestore(i){rPlanData[i].status='pending';renderRetPlan()}
+function rShowAlts(i){
+  const item=rPlanData[i],el=document.getElementById('ralts-'+item.id);
+  if(el.innerHTML){el.innerHTML='';return}
+  let h=`<div class="alts"><div class="alt-title">Заменить «${item.name.replace(/.*: /,'')}» на:</div>`;
+  item.alts.forEach((a,ai)=>{h+=`<div class="alt-opt" onclick="rPickAlt(${i},${ai})"><div class="alt-opt-name">${a.name}</div><div class="alt-opt-sub">${a.sub}</div></div>`});
+  h+=`</div>`;el.innerHTML=h;
+}
+function rPickAlt(i,ai){
+  const alt=rPlanData[i].alts[ai],old=rPlanData[i].name;
+  rPlanData[i].name=alt.name;rPlanData[i].sub=alt.sub;rPlanData[i].status='accepted';
+  T('Заменено: '+old.replace(/.*: /,'')+' → '+alt.name.replace(/.*: /,''));renderRetPlan();
+}
+function rRecalc(){
+  const rej=rPlanData.filter(p=>p.status==='rejected').length;
+  if(!rej){T('Нечего пересчитывать. Уберите что не нравится.');return}
+  rPlanData.forEach(item=>{if(item.status==='rejected'&&item.alts&&item.alts.length){const a=item.alts[Math.floor(Math.random()*item.alts.length)];item.name=a.name;item.sub=a.sub;item.status='pending'}else if(item.status==='rejected')item.status='pending'});
+  T('План пересчитан!');renderRetPlan();
+}
+function rAcceptAll(){
+  rPlanAccepted=true;
+  rPlanData.forEach(item=>{if(item.status==='pending')item.status='accepted'});
+  document.getElementById('r-plan-btns-edit').style.display='none';
+  document.getElementById('r-plan-btns-accepted').style.display='block';
+  document.getElementById('r-filtered').style.display='none';
+  const inf=document.getElementById('r-plan-info');
+  inf.innerHTML='<b>План принят!</b>Все бронирования подтверждены. Консьерж будет уведомлять вас об изменениях.';
+  inf.style.background='var(--ol)';inf.style.borderColor='#B8E6D0';inf.style.color='var(--ok)';
+  renderRetPlan();T('План принят! Бронирования подтверждены.');
+}
+function rEdit(){
+  rPlanAccepted=false;
+  rPlanData.forEach(item=>{if(item.status==='accepted'&&!item.fixed)item.status='pending'});
+  document.getElementById('r-plan-btns-edit').style.display='block';
+  document.getElementById('r-plan-btns-accepted').style.display='none';
+  document.getElementById('r-filtered').style.display='block';
+  const inf=document.getElementById('r-plan-info');
+  inf.innerHTML='<b>Режим редактирования</b>Измените план, замените активности, и нажмите «Принять план» когда будет готово.';
+  inf.style.background='var(--pp)';inf.style.borderColor='#D4DEFF';inf.style.color='var(--pri)';
+  renderRetPlan();T('Режим редактирования.');
 }
 
 // Help screen logic
