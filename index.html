@@ -508,23 +508,23 @@ body{font-family:'Manrope',sans-serif;background:#111827;display:flex;flex-direc
     <div class="ct">
       <div class="dots"><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
 
-      <div class="st" style="margin-top:0">Когда приезжаете?</div>
+      <div class="st" style="margin-top:0">Даты поездки</div>
       <div class="date-row">
         <div class="date-box sel"><div class="date-lbl">Заезд</div><div class="date-val">15 мар</div><div class="date-sub">Пятница</div></div>
         <div class="date-box sel"><div class="date-lbl">Выезд</div><div class="date-val">17 мар</div><div class="date-sub">Воскресенье</div></div>
       </div>
-      <div class="nights-info">2 ночи · Зимний сезон · Горные лыжи и крытые активности</div>
+      <div class="nights-info">2 ночи · Зимний сезон · Активности и отдых</div>
 
-      <div class="st">С кем отдыхаете?</div>
+      <div class="st">Формат отдыха</div>
       <div class="comp">
         <div class="comp-item sel" onclick="pickComp(this,true)"><div class="comp-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><div class="comp-l">С семьёй</div><div class="comp-s">Дети есть</div></div>
-        <div class="comp-item" onclick="pickComp(this,false)"><div class="comp-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><div class="comp-l">Вдвоём</div></div>
-        <div class="comp-item" onclick="pickComp(this,false)"><div class="comp-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg></div><div class="comp-l">С друзьями</div></div>
-        <div class="comp-item" onclick="pickComp(this,false)"><div class="comp-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><div class="comp-l">Один</div></div>
+        <div class="comp-item" onclick="pickComp(this,false)"><div class="comp-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><div class="comp-l">Пара</div></div>
+        <div class="comp-item" onclick="pickComp(this,false)"><div class="comp-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg></div><div class="comp-l">Компания</div></div>
+        <div class="comp-item" onclick="pickComp(this,false)"><div class="comp-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><div class="comp-l">Индивидуально</div></div>
       </div>
       <div id="kids-box" class="kids-box visible">
-        <div class="kids-row"><div class="kids-label">Сколько детей</div><div class="kids-ctrl"><button class="kids-btn" onclick="adjKids(-1)">-</button><span id="kids-count" class="kids-val">2</span><button class="kids-btn" onclick="adjKids(1)">+</button></div></div>
-        <div style="font-size:11px;color:var(--ts);margin-bottom:6px">Возраст каждого ребёнка:</div>
+        <div class="kids-row"><div class="kids-label">Дети</div><div class="kids-ctrl"><button class="kids-btn" onclick="adjKids(-1)">-</button><span id="kids-count" class="kids-val">2</span><button class="kids-btn" onclick="adjKids(1)">+</button></div></div>
+        <div style="font-size:11px;color:var(--ts);margin-bottom:6px">Возраст детей:</div>
         <div id="age-inputs" class="age-inputs">
           <div class="age-chip">Ребёнок 1: <select><option>1</option><option>2</option><option>3</option><option>4</option><option selected>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select> лет</div>
           <div class="age-chip">Ребёнок 2: <select><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option selected>10</option><option>11</option><option>12</option></select> лет</div>
@@ -1750,9 +1750,44 @@ body{font-family:'Manrope',sans-serif;background:#111827;display:flex;flex-direc
           <div style="background:rgba(46,158,107,.25);padding:4px 10px;border-radius:6px;font-size:10px;font-weight:700;color:#6EE7A8">Всё в порядке</div>
         </div>
         <div class="res-prop-status">
-          <div class="res-prop-st"><div class="res-prop-st-val">+22°</div><div class="res-prop-st-lbl">в доме</div></div>
-          <div class="res-prop-st" onclick="go('res-security')" style="cursor:pointer"><div class="res-prop-st-val" style="font-size:13px;color:#2E9E6B">Норма</div><div class="res-prop-st-lbl">охрана ›</div></div>
+          <div class="res-prop-st"><div class="res-prop-st-val">+7°</div><div class="res-prop-st-lbl">на курорте</div></div>
+          <div class="res-prop-st"><div class="res-prop-st-val">5</div><div class="res-prop-st-lbl">событий ›</div></div>
           <div class="res-prop-st"><div class="res-prop-st-val">3</div><div class="res-prop-st-lbl">заявки</div></div>
+        </div>
+      </div>
+
+      <!-- Weather & Events on resort -->
+      <div class="cd" style="padding:14px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+          <div class="cn" style="font-size:14px">Погода на курорте</div>
+          <div style="font-size:11px;color:var(--ts)">Завидово</div>
+        </div>
+        <div style="display:flex;gap:6px;overflow-x:auto;padding-bottom:4px">
+          <div style="flex-shrink:0;text-align:center;background:var(--pl);border-radius:10px;padding:8px 12px;min-width:60px"><div style="font-size:10px;font-weight:600;color:var(--pri)">Сб</div><div style="font-size:16px;font-weight:700;margin:2px 0">+7°</div><div style="font-size:9px;color:var(--ts)">Облачно</div></div>
+          <div style="flex-shrink:0;text-align:center;background:var(--card);border:1px solid var(--brd);border-radius:10px;padding:8px 12px;min-width:60px"><div style="font-size:10px;font-weight:600;color:var(--ts)">Вс</div><div style="font-size:16px;font-weight:700;margin:2px 0">+9°</div><div style="font-size:9px;color:var(--ts)">Ясно</div></div>
+          <div style="flex-shrink:0;text-align:center;background:var(--card);border:1px solid var(--brd);border-radius:10px;padding:8px 12px;min-width:60px"><div style="font-size:10px;font-weight:600;color:var(--ts)">Пн</div><div style="font-size:16px;font-weight:700;margin:2px 0">+6°</div><div style="font-size:9px;color:var(--ts)">Дождь</div></div>
+          <div style="flex-shrink:0;text-align:center;background:var(--card);border:1px solid var(--brd);border-radius:10px;padding:8px 12px;min-width:60px"><div style="font-size:10px;font-weight:600;color:var(--ts)">Вт</div><div style="font-size:16px;font-weight:700;margin:2px 0">+8°</div><div style="font-size:9px;color:var(--ts)">Облачно</div></div>
+          <div style="flex-shrink:0;text-align:center;background:var(--card);border:1px solid var(--brd);border-radius:10px;padding:8px 12px;min-width:60px"><div style="font-size:10px;font-weight:600;color:var(--ts)">Ср</div><div style="font-size:16px;font-weight:700;margin:2px 0">+10°</div><div style="font-size:9px;color:var(--ts)">Ясно</div></div>
+        </div>
+      </div>
+
+      <div class="st">Мероприятия на курорте <span class="sl">Все</span></div>
+      <div class="cd" style="padding:12px">
+        <div style="display:flex;gap:10px;align-items:center;padding-bottom:8px;border-bottom:1px solid var(--brd)">
+          <div style="text-align:center;min-width:36px"><div style="font-size:10px;font-weight:700;color:var(--pri)">СБ</div><div style="font-size:16px;font-weight:700">5</div></div>
+          <div><div style="font-weight:600;font-size:13px">Мастер-класс по виноделию</div><div style="font-size:11px;color:var(--ts)">Сырный завод, 16:00. Дегустация 5 вин. 3 500 руб</div></div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--brd)">
+          <div style="text-align:center;min-width:36px"><div style="font-size:10px;font-weight:700;color:var(--pri)">ВС</div><div style="font-size:16px;font-weight:700">6</div></div>
+          <div><div style="font-weight:600;font-size:13px">Открытый гольф-турнир</div><div style="font-size:11px;color:var(--ts)">Гольф-поле, 9:00. Регистрация открыта. 5 000 руб</div></div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--brd)">
+          <div style="text-align:center;min-width:36px"><div style="font-size:10px;font-weight:700;color:var(--gold)">ВТ</div><div style="font-size:16px;font-weight:700">8</div></div>
+          <div><div style="font-weight:600;font-size:13px">Джазовый вечер</div><div style="font-size:11px;color:var(--ts)">Бар The Waterfront, 20:00. Вход свободный</div></div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;padding-top:8px">
+          <div style="text-align:center;min-width:36px"><div style="font-size:10px;font-weight:700;color:var(--gold)">СР</div><div style="font-size:16px;font-weight:700">9</div></div>
+          <div><div style="font-weight:600;font-size:13px">Детский день: эстафеты</div><div style="font-size:11px;color:var(--ts)">Семейный парк, 11:00. Дети 4-12 лет. Бесплатно</div></div>
         </div>
       </div>
 
@@ -2316,8 +2351,7 @@ body{font-family:'Manrope',sans-serif;background:#111827;display:flex;flex-direc
           <div class="res-prop-name">Берёзовая аллея, 12</div>
           <div class="res-prop-addr">Участок 24 сотки · Дом 380 м² · Гольф-поле, 1-я линия</div>
           <div class="res-prop-status" style="margin-top:12px">
-            <div class="res-prop-st"><div class="res-prop-st-val">+22°</div><div class="res-prop-st-lbl">в доме</div></div>
-            <div class="res-prop-st"><div class="res-prop-st-val" style="font-size:13px;color:#2E9E6B">Норма</div><div class="res-prop-st-lbl">охрана</div></div>
+            <div class="res-prop-st"><div class="res-prop-st-val">+7°</div><div class="res-prop-st-lbl">на курорте</div></div>
             <div class="res-prop-st"><div class="res-prop-st-val">12</div><div class="res-prop-st-lbl">камеры</div></div>
           </div>
         </div>
